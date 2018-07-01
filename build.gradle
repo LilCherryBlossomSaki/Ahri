@@ -1,0 +1,28 @@
+plugins {
+    id'java'
+    id'application'
+    id'com.github.johnrengelman.shadow' version '2.0.2'
+}
+
+mainClassName = 'Ahri.Ahri'
+
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    maven { url 'https://dl.bintray.com/uzume/discord/' }
+}
+
+dependencies {
+    compile 'net.dv8tion:JDA:3.6.0_375'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    compile 'com.jagrosh:jda-utilities:2.1.1'
+    compile 'com.sedmelluq:lavaplayer:1.3.5'
+    compile group: 'com.uzume', name: 'CommandsJDA', version: '0.0.1'
+    compile group: 'com.google.guava', name: 'guava', version: '23.0'
+    compile group: 'org.yaml', name: 'snakeyaml', version: '1.18'
+}
+
+compileJava.options.encoding = 'UTF-8'
